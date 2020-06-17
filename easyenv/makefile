@@ -18,18 +18,19 @@ PYTHON_INTERPRETER = python3
 
 ## Install Python Dependencies
 prereq:
-	$ sudo apt install python3
 	$ sudo apt install tree \
 	                   docker.io \
 	                   build-essential \
                        libssl-dev \
                        libffi-dev \
+                       python3 \
                        python3-dev \
                        python3-venv \
                        python3-pip -y
 	$(PYTHON_INTERPRETER) -m pip install -U pip \
 											setuptools \
 											wheel \
+											twine \
 											virtualenv \
 											pipenv \
 											jupyter \

@@ -1,4 +1,19 @@
 # Easy env
+
+```shell script
+    ______                
+   / ____/___ ________  __
+  / __/ / __ `/ ___/ / / /
+ / /___/ /_/ (__  ) /_/ / 
+/_____/\__,_/____/\__, /  
+                 /____/   
+    ______           _                                       __ 
+   / ____/___ _   __(_)________  ____  ____ ___  ___  ____  / /_
+  / __/ / __ \ | / / / ___/ __ \/ __ \/ __ `__ \/ _ \/ __ \/ __/
+ / /___/ / / / |/ / / /  / /_/ / / / / / / / / /  __/ / / / /_  
+/_____/_/ /_/|___/_/_/   \____/_/ /_/_/ /_/ /_/\___/_/ /_/\__/  
+                                                                
+```
 é uma ferramenta de CLI para preparar o ambiente de desenvolvimento e reprodução para projetos de data science/ machine learning/ deep learning.
 
 - Suitable for implementing the config requirements of a 12-factor app: https://12factor.net/config
@@ -17,6 +32,14 @@
 - [ ]
 - [ ]
 - [ ]
+
+
+## Which diference to Anaconda ?
+- Anaconda need [extended dependencies](https://docs.anaconda.com/anaconda/install/linux/)
+- Anaconda dont install pré-requisitos no S.O
+- Anaconta dont apply linter
+- Anaconda dont generate file with configuration environment
+- Anaconta dont tree in each project
 
 # Running
 1. [Local](#running-in-local)
