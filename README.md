@@ -1,117 +1,125 @@
-# Easy env
+# Show Env
 
 ```shell script
-    ______                
-   / ____/___ ________  __
-  / __/ / __ `/ ___/ / / /
- / /___/ /_/ (__  ) /_/ / 
-/_____/\__,_/____/\__, /  
-                 /____/   
-    ______           _                                       __ 
-   / ____/___ _   __(_)________  ____  ____ ___  ___  ____  / /_
-  / __/ / __ \ | / / / ___/ __ \/ __ \/ __ `__ \/ _ \/ __ \/ __/
- / /___/ / / / |/ / / /  / /_/ / / / / / / / / /  __/ / / / /_  
-/_____/_/ /_/|___/_/_/   \____/_/ /_/_/ /_/ /_/\___/_/ /_/\__/  
-                                                                
-```
-é uma ferramenta de CLI para preparar o ambiente de desenvolvimento e reprodução para projetos de data science/ machine learning/ deep learning.
+         __                                 
+   _____/ /_  ____ _      _____  ____ _   __
+  / ___/ __ \/ __ \ | /| / / _ \/ __ \ | / /
+ (__  ) / / / /_/ / |/ |/ /  __/ / / / |/ / 
+/____/_/ /_/\____/|__/|__/\___/_/ /_/|___/  
+                                            
 
-- Suitable for implementing the config requirements of a 12-factor app: https://12factor.net/config
-
-
-## Features
-- [ ] instala os pré-requisitos no S.O
-- [ ] instala o Python3
-- [ ] instala virtualEnv
-- [ ] install Pipenv
-- [ ] Delete all compiled Python files
-- [ ] Apply Lint using flake8
-- [ ] Test if environment contains Python3
-- [ ] Running on virtual environment
-- [ ] Running on isolation environment
-- [ ]
-- [ ]
-- [ ]
-
-
-## Which diference to Anaconda ?
-- Anaconda need [extended dependencies](https://docs.anaconda.com/anaconda/install/linux/)
-- Anaconda dont install pré-requisitos no S.O
-- Anaconta dont apply linter
-- Anaconda dont generate file with configuration environment
-- Anaconta dont tree in each project
-
-# Running
-1. [Local](#running-in-local)
-2. [Development: Virtual Environment](#running-in-virtual-environment)
-3. [Deploy: Container](#running-in-container)
-
-
-## Running in Local
-- Install Python Dependencies, Test python environment and Delete all compiled Python files.
-
-```shell script
-sudo make
-
-# Available rules:
-
-# clean               Delete all compiled Python files
-# lint                Lint using flake8
-# prereq              Install Python Dependencies
-# test_environment    Test python environment is setup correctly
 ```
 
+It is a tool to show detailed information of:
+- Python
+- Pip
+- Libraries
+- SO
+- Disck usage
+
+by project.
+
+## Requirement
+- Python 3.7 or more<br/>
+- pip
+- Python Virtual Environment (recomended)
+
+## Install
 ```shell script
-make prereq
-make test_environment
-make clean
+pip3 install showenv
 ```
 
-- Install the libraries
-
+## Running
 ```shell script
-pip3 install -r virtualenv_requirements.txt # libs necessary to prepare virtual environment
-pip3 install -r requirements.txt            # libs necessary in notebooks
+cd <REPOSITORY_TO_ANALYSE>
+showenv
+```
+
+
+## Output
+2 files generated in current project.
+
+
+- config_environment.txt
+```
+OS:
+Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 19.04
+Release:	19.04
+Codename:	disco
+
+Python Version:
+Python 3.7.3
+
+Pip Version:
+pip 19.1.1 from $HOME/projetos/challenges/kaggle/porto-seguro-safe-driver-prediction/src/environment/venv/lib/python3.7/site-packages/pip (python 3.7)
+
+Jupyter Version:
+4.4.0
+
+--------------------------------------------------
+
+Disk Usage:
+
+data:
+383M	data/
+
+virtual env:
+736M	src/environment/venv/
+
+all:
+1,3G	.
+```
+
+- struture_project.txt
+```
+.
+├── data
+│   ├── kaggle_submission.csv
+│   └── raw
+│       ├── datasets.zip
+│       ├── sample_submission.csv
+│       ├── test.csv
+│       └── train.csv
+├── LICENSE
+├── notebooks
+│   └── porto_seguro_safe_driver.ipynb
+├── README.md
+├── references
+│   └── porto-seguro-vector-logo.png
+└── src
+    └── environment
+        ├── config_environment.txt
+        ├── container
+        │   └── Dockerfile
+        ├── create_requirements.sh
+        ├── create_virtual_env.sh
+        ├── __init__.py
+        ├── jupyter_notebook_config.py
+        ├── makefile
+        ├── prepare_env.py
+        ├── README.md
+        ├── requirements.txt
+        ├── show_config_environment.sh
+        ├── show_struture_project.sh
+        ├── struture_project.txt
+        ├── test_environment.py
+        ├── venv
+        └── virtualenv_requirements.txt
+
+8 directories, 24 files
 ```
 
 ---
 
-## Running in Virtual Environment
-
-- Create virtual environment
-
-```shell script
-bash create_virtual_env.sh
-```
-
-- Activate this semi-isolated environment
-
-```shell script
-source venv/bin/activate
-```
-
-- Install the libraries
-
-```shell script
-pip3 install -r virtualenv_requirements.txt # libs necessary to prepare virtual environment
-pip3 install -r requirements.txt            # libs necessary in notebooks
-```
-
-
-```shell script
-pipenv --python 3 # libs necessary to prepare virtual environment
-pipenv install -e pipefile
-```
+#### Author
+<a href="mailto:brunocampos01@gmail.com" target="_blank"><img class="" src="https://github.com/brunocampos01/devops/blob/master/images/gmail.png" width="28"></a>
+<a href="https://github.com/brunocampos01" target="_blank"><img class="ai-subscribed-social-icon" src="https://github.com/brunocampos01/devops/blob/master/images/github.png" width="30"></a>
+<a href="https://www.linkedin.com/in/brunocampos01/" target="_blank"><img class="ai-subscribed-social-icon" src="https://github.com/brunocampos01/devops/blob/master/images/linkedin.png" width="30"></a>
+Bruno Aurélio Rôzza de Moura Campos 
 
 ---
 
-## Running in Container
-
-- Necessary be in home this project
-
-```sh
-name_project=$(basename "$(pwd)")
-echo $name_project
-sudo docker build --no-cache -t $name_project -f src/environment/container/Dockerfile .
-sudo docker run -it -p 8888:8888 $name_project
-```
+#### Copyright
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>

@@ -23,7 +23,7 @@ with open(os.path.join(HERE, "README.md")) as f:
     README = f.read()
 
 setup(name='showenv',
-      version='0.1',
+      version='1.0',
       packages=find_packages(),
       include_package_data=True, # add *sh
       scripts=['showenv/scripts/show_config_environment.sh',
