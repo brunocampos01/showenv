@@ -22,7 +22,7 @@ html2text==2020.1.16
 importlib-resources==2.0.1
 pyfiglet==0.8.post1
 PyMySQL==0.9.3
-pyshow==0.1
+showenv==0.1
 realpython-reader==1.0.0
 six==1.15.0
 sty==1.0.0b12
@@ -37,5 +37,5 @@ data:
 
 virtual env:
 
-all:
-812K	.
+all used in this project:
+912K	.

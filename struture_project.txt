@@ -9,13 +9,13 @@
 │       └── [1;33mtest_env.py[00m
 ├── config_environment.txt
 ├── [1;93mdist[00m
-│   └── [rsmpyshow-0.1-py3.8.egg[00m
+│   └── [rsmshowenv-0.1-py3.8.egg[00m
 ├── [1;93mdocs[00m
 ├── [34mLICENSE[00m
-├── [1;93mpyshow[00m
+├── [1;93mshowenv[00m
 │   ├── [1;33m__init__.py[00m
 │   ├── __main__.py
-│   ├── pyshow.py
+│   ├── showenv.py
 │   └── [1;93mscripts[00m
 │       ├── config_environment.txt
 │       ├── __init__.py
@@ -23,7 +23,7 @@
 │       ├── [1;33mshow_structure_project.sh[00m
 │       ├── struture_project.txt
 │       └── [1;33mtest_env.py[00m
-├── [1;93mpyshow.egg-info[00m
+├── [1;93mshowenv.egg-info[00m
 │   ├── dependency_links.txt
 │   ├── entry_points.txt
 │   ├── not-zip-safe

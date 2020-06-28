@@ -22,23 +22,23 @@ except AttributeError:
 with open(os.path.join(HERE, "README.md")) as f:
     README = f.read()
 
-setup(name='pyshow',
+setup(name='showenv',
       version='0.1',
       packages=find_packages(),
       include_package_data=True, # add *sh
-      scripts=['pyshow/scripts/show_config_environment.sh',
-               'pyshow/scripts/show_structure_project.sh',
-               'pyshow/scripts/config_environment.txt',
-               'pyshow/scripts/struture_project.txt',
-               'pyshow/scripts/test_env.py'],
+      scripts=['showenv/scripts/show_config_environment.sh',
+               'showenv/scripts/show_structure_project.sh',
+               'showenv/scripts/config_environment.txt',
+               'showenv/scripts/struture_project.txt',
+               'showenv/scripts/test_env.py'],
       install_requires=requirements,
       entry_points={
-          "console_scripts": ["pyshow=pyshow.__main__:main"]
+          "console_scripts": ["showenv=showenv.__main__:main"]
       },
       description='Show informations about project, python, pip, libraries and OS',
       long_description=README,
       long_description_content_type="text/markdown",
-      url='https://github.com/brunocampos01/pyshow',
+      url='https://github.com/brunocampos01/showenv',
       author='Bruno Campos',
       author_email="brunocampos01@gmail.com",
       license='MIT',
