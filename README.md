@@ -14,7 +14,7 @@ It is a tool to show detailed information of:
 - Python
 - Pip
 - Libraries
-- SO
+- OS
 - Disck usage
 
 by project.
