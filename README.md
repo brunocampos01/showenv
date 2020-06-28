@@ -40,7 +40,7 @@ showenv
 2 files generated in current project.
 
 
-- config_environment.txt
+- config_env.txt
 ```
 OS:
 Linux
@@ -90,7 +90,7 @@ all:
 │   └── porto-seguro-vector-logo.png
 └── src
     └── environment
-        ├── config_environment.txt
+        ├── config_env.txt
         ├── container
         │   └── Dockerfile
         ├── create_requirements.sh
@@ -101,7 +101,7 @@ all:
         ├── prepare_env.py
         ├── README.md
         ├── requirements.txt
-        ├── show_config_environment.sh
+        ├── show_config_env.sh
         ├── show_struture_project.sh
         ├── struture_project.txt
         ├── test_environment.py

@@ -18,13 +18,14 @@ def install_prereq():
 
     print('-' * 50, end='\n\n')
     print('Creating and show structure this project\n')
-    subprocess.call('touch struture_project.txt', shell=True)
+    subprocess.call('touch structure_project.txt', shell=True)
     subprocess.call(f'bash {HERE}/scripts/show_structure_project.sh', shell=True)
-    subprocess.call(f'mv {HERE}/scripts/struture_project.txt {cwd}', shell=True)
+    subprocess.call(f'mv {HERE}/scripts/structure_project.txt {cwd}', shell=True)
 
     print('-' * 50, end='\n\n')
     print('Creating file whats contains configuration environment\n')
-    subprocess.call(f'bash {HERE}/scripts/show_config_environment.sh', shell=True)
-    subprocess.call('touch config_environment.txt', shell=True)
-    subprocess.call(f'mv {HERE}/scripts/config_environment.txt {cwd}', shell=True)
+    subprocess.call(f'bash {HERE}/scripts/show_config_env.sh', shell=True)
+    subprocess.call('touch config_env.txt', shell=True)
+    subprocess.call(f'mv {HERE}/scripts/config_env.txt {cwd}', shell=True)
     print('-' * 50, end='\n\n')
+    

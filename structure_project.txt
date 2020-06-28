@@ -1,0 +1,38 @@
+[1;93m.[00m
+├── [1;93mbuild[00m
+│   ├── [1;93mbdist.linux-x86_64[00m
+│   └─struture_project  ├── [1;33mconfig_env.txt[00m
+│       ├── [1;33mshow_config_env.sh[00m
+│       ├── [1;33mshow_structure_project.sh[00m
+│       ├── [1;33mstructure_project.txt[00m
+│       └── [1;33mtest_env.py[00m
+├── config_env.txt
+├── [1;93mdist[00m
+│   └── [rsmshowenv-1.0-py3.8.egg[00m
+├── [34mLICENSE[00m
+├── [1;33mREADME.md[00m
+├── requirements.txt
+├── setup.py
+├── [1;93mshowenv[00m
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── [1;93mscripts[00m
+│   │   ├── config_env.txt
+│   │   ├── [1;33mshow_config_env.sh[00m
+│   │   ├── [1;33mshow_structure_project.sh[00m
+│   │   ├── structure_project.txt
+│   │   └── [1;33mtest_env.py[00m
+│   └── showenv.py
+├── [1;93mshowenv.egg-info[00m
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── not-zip-safe
+│   ├── PKG-INFO
+│   ├── requires.txt
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── structure_project.txt
+└── [1;93mtests[00m
+    └── test_libraries.ipynb
+
+8 directories, 28 files

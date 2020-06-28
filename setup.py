@@ -26,10 +26,10 @@ setup(name='showenv',
       version='1.0',
       packages=find_packages(),
       include_package_data=True, # add *sh
-      scripts=['showenv/scripts/show_config_environment.sh',
+      scripts=['showenv/scripts/show_config_env.sh',
                'showenv/scripts/show_structure_project.sh',
-               'showenv/scripts/config_environment.txt',
-               'showenv/scripts/struture_project.txt',
+               'showenv/scripts/config_env.txt',
+               'showenv/scripts/structure_project.txt',
                'showenv/scripts/test_env.py'],
       install_requires=requirements,
       entry_points={
