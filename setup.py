@@ -35,7 +35,7 @@ setup(name='pyshow',
       entry_points={
           "console_scripts": ["pyshow=pyshow.__main__:main"]
       },
-      description='Prepare environment to run Data Science applications',
+      description='Show informations about project, python, pip, libraries and OS',
       long_description=README,
       long_description_content_type="text/markdown",
       url='https://github.com/brunocampos01/pyshow',
