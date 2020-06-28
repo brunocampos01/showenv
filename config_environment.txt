@@ -1,0 +1,41 @@
+null
+OS:
+Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04 LTS
+Release:	20.04
+Codename:	focal
+
+Python Version:
+Python 3.8.2
+Python 3.8.2
+
+Pip Version:
+pip 20.1.1 from /home/campos/projects/venv/lib/python3.8/site-packages/pip (python 3.8)
+
+Installed Packages:
+appdirs==1.4.4
+distlib==0.3.1
+feedparser==5.2.1
+filelock==3.0.12
+html2text==2020.1.16
+importlib-resources==2.0.1
+pyfiglet==0.8.post1
+PyMySQL==0.9.3
+pyshow==0.1
+realpython-reader==1.0.0
+six==1.15.0
+sty==1.0.0b12
+typing==3.7.4.1
+virtualenv==20.0.23
+
+--------------------------------------------------
+
+Disk Usage:
+
+data:
+
+virtual env:
+
+all:
+812K	.

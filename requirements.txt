@@ -1,1 +1,4 @@
+pyfiglet==0.8.post1
 sty==1.0.0b12
+virtualenv==20.0.23
+filelock<4,>=3.0.0

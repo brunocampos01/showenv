@@ -1,7 +1,7 @@
 import os
-from setuptools import \
-    find_packages  # get modules (pyssas) and submodules (cube_formatter, ...)
+from setuptools import find_packages
 from setuptools import setup
+
 
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
@@ -22,18 +22,23 @@ except AttributeError:
 with open(os.path.join(HERE, "README.md")) as f:
     README = f.read()
 
-
-setup(name='easyenv',
+setup(name='pyshow',
       version='0.1',
       packages=find_packages(),
+      include_package_data=True, # add *sh
+      scripts=['pyshow/scripts/show_config_environment.sh',
+               'pyshow/scripts/show_structure_project.sh',
+               'pyshow/scripts/config_environment.txt',
+               'pyshow/scripts/struture_project.txt',
+               'pyshow/scripts/test_env.py'],
       install_requires=requirements,
-            entry_points={
-          "console_scripts": ["easyenv=easyenv.__main__:main"]
+      entry_points={
+          "console_scripts": ["pyshow=pyshow.__main__:main"]
       },
       description='Prepare environment to run Data Science applications',
       long_description=README,
       long_description_content_type="text/markdown",
-      url='https://github.com/brunocampos01/easyenv',
+      url='https://github.com/brunocampos01/pyshow',
       author='Bruno Campos',
       author_email="brunocampos01@gmail.com",
       license='MIT',
