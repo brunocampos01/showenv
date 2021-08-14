@@ -7,7 +7,7 @@ f = Figlet(font='slant')
 
 def main():
     print(f.renderText('showenv'))
-    print('Show informations about project, python, pip, libraries and OS \n ----- \n')
+    print('Show informations about project, python version, pip, libraries and OS')
     install_prereq()
 
 
