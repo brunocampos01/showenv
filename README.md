@@ -16,18 +16,16 @@ It is a tool to show detailed information of:
 - Pip
 - Libraries
 - OS
-- Disck usage
-
-by project.
+- Disk usage
 
 ## Requirement
-- Python 3.7 or more<br/>
+- Python 3.6 or more
 - pip
-- Python Virtual Environment (recomended)
+- Debian based distros
 
 ## Install
 ```shell script
-pip3 install showenv
+pip install showenv
 ```
 
 ## Running
@@ -39,7 +37,6 @@ showenv
 
 ## Output: Report of Project Environment
 2 files generated in current project.
-
 
 - config_env.txt
 ```

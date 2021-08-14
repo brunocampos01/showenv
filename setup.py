@@ -23,7 +23,7 @@ with open(os.path.join(HERE, "README.md")) as f:
     README = f.read()
 
 setup(name='showenv',
-      version='1.0',
+      version='2.0',
       packages=find_packages(),
       include_package_data=True, # add *sh
       scripts=['showenv/scripts/show_config_env.sh',
@@ -39,7 +39,7 @@ setup(name='showenv',
       long_description=README,
       long_description_content_type="text/markdown",
       url='https://github.com/brunocampos01/showenv',
-      author='Bruno Campos',
+      author='brunocampos01',
       author_email="brunocampos01@gmail.com",
       license='MIT',
       platforms='linux',
