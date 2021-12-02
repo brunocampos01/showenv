@@ -32,7 +32,7 @@ This project is tested with:
 pip install showenv
 ```
 
-## Running
+## Usage
 ```shell script
 cd <REPOSITORY_TO_ANALYSE>
 showenv
