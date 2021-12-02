@@ -18,10 +18,14 @@ It is a tool to show detailed information of:
 - OS
 - Disk usage
 
-## Requirement
-- Python 3.6 or more
-- pip
-- Debian based distros
+## Requirements
+This project is tested with:
+
+| Requisite      | Version             |
+|----------------|---------------------|
+| Python         | 3.9.1               |
+| Pip            | 21.2.4              |
+| Debian distros | Ubuntu/Linux Mint   |
 
 ## Install
 ```shell script
