@@ -102,7 +102,7 @@
 # Syntax 
 ###############################################################################
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-*.rb linguist-language=Java
+*.rb   linguist-language=Ruby
 *.java linguist-language=Java
-*.py linguist-language=Python
-*.pl linguist-language=Prolog
+*.py   linguist-language=Python
+*.pl   linguist-language=Prolog
