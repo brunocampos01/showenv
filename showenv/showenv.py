@@ -9,6 +9,8 @@ cwd = os.getcwd()
 
 def install_prereq():
     print('-' * 79, end='\n')
+    
+    # TODO: this piece can is a conditional
     print('It`s necessary install: tree\n')
     print('Installing Dependencies\n')
     subprocess.call('sudo apt install tree', shell=True)
